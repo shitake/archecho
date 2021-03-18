@@ -1,0 +1,13 @@
+version: "3"
+services:
+  archecho:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    image: archecho
+    container_name: archecho
+    ports:
+      - "9088:8888"  # Jupyter
+    volumes:
+      - $PWD:/home/archecho
+    tty: true
